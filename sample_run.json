@@ -1,0 +1,447 @@
+{
+  "rfp_run_id": "RFP-20261010-100908-72B0",
+  "created_at": "2026-10-10T10:09:08+00:00",
+  "llm": {
+    "provider": "mock",
+    "model": "mock-keyword-scorer"
+  },
+  "criteria": [
+    {
+      "criterion_id": 1,
+      "name": "Technical Capability",
+      "description": "Architecture, integrations, scalability, technical fit",
+      "weight": 30.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 2,
+      "name": "Implementation Plan",
+      "description": "Timeline, milestones, staffing, risk plan",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 3,
+      "name": "Commercial Value",
+      "description": "Pricing clarity, total cost, assumptions",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 4,
+      "name": "Security & Compliance",
+      "description": "Controls, certifications, privacy, auditability",
+      "weight": 20.0,
+      "max_score": 10.0
+    },
+    {
+      "criterion_id": 5,
+      "name": "Support & Experience",
+      "description": "Support model, similar projects, references",
+      "weight": 10.0,
+      "max_score": 10.0
+    }
+  ],
+  "suppliers": [
+    {
+      "supplier_name": "Apex Systems",
+      "submission_date": "2026-09-10",
+      "experience_rating": 4.2,
+      "absolute_score": 82.9,
+      "ppi": 84.1659,
+      "criteria_results": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 10 of 10 indicators (architecture, microservice, api, integration, scalab).",
+          "evidence": "Cloud-native engineering for regulated enterprises | Fictional document for classroom use",
+          "status": "ok",
+          "score": 10.0,
+          "weight": 30.0,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 30.0
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 7 of 10 indicators (milestone, phase, week, risk register, go-live).",
+          "evidence": "Approach: Delivery follows six phases from discovery to hypercare, with an integration test environment",
+          "status": "ok",
+          "score": 7.3,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -2.7,
+          "relative_pct": 73.0,
+          "weighted_contribution": 14.6
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 6 of 10 indicators (usd, total cost, fixed price, assumption, licen).",
+          "evidence": "Price Table and Assumptions",
+          "status": "ok",
+          "score": 6.4,
+          "weight": 20.0,
+          "benchmark": 9.1,
+          "gap": -2.7,
+          "relative_pct": 70.33,
+          "weighted_contribution": 12.8
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 10 of 10 indicators (iso 27001, soc 2, encrypt, audit, gdpr).",
+          "evidence": "Apex holds ISO 27001 and SOC 2 Type II certifications, renewed annually.",
+          "status": "ok",
+          "score": 10.0,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 20.0
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 5 of 10 indicators (sla, reference, similar, support desk, years).",
+          "evidence": "Immutable audit logs are retained for seven years under a documented data retention policy.",
+          "status": "ok",
+          "score": 5.5,
+          "weight": 10.0,
+          "benchmark": 10.0,
+          "gap": -4.5,
+          "relative_pct": 55.0,
+          "weighted_contribution": 5.5
+        }
+      ],
+      "risks": [
+        "Mock risk: verify claims with the supplier."
+      ],
+      "overall_summary": "Offline mock evaluation based on keyword evidence.",
+      "warnings": [],
+      "final_rank": 1
+    },
+    {
+      "supplier_name": "NexaWorks",
+      "submission_date": "2026-09-09",
+      "experience_rating": 4.5,
+      "absolute_score": 81.1,
+      "ppi": 82.9,
+      "criteria_results": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 6 of 10 indicators (architecture, api, integration, scalab, sso).",
+          "evidence": "Architecture: A modular platform with a documented REST API.",
+          "status": "ok",
+          "score": 6.4,
+          "weight": 30.0,
+          "benchmark": 10.0,
+          "gap": -3.6,
+          "relative_pct": 64.0,
+          "weighted_contribution": 19.2
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 10 of 10 indicators (milestone, phase, week, sprint, raci).",
+          "evidence": "milestone-driven programme.",
+          "status": "ok",
+          "score": 10.0,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 20.0
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 9 of 10 indicators (usd, total cost, fixed price, assumption, licen).",
+          "evidence": "Price Table and Assumptions",
+          "status": "ok",
+          "score": 9.1,
+          "weight": 20.0,
+          "benchmark": 9.1,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 18.2
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 7 of 10 indicators (iso 27001, soc 2, encrypt, audit, gdpr).",
+          "evidence": "NexaWorks is ISO 27001 certified.",
+          "status": "ok",
+          "score": 7.3,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -2.7,
+          "relative_pct": 73.0,
+          "weighted_contribution": 14.6
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 9 of 10 indicators (24x7, sla, reference, similar, clients).",
+          "evidence": "a change and training lead, a QA lead and a customer success manager.",
+          "status": "ok",
+          "score": 9.1,
+          "weight": 10.0,
+          "benchmark": 10.0,
+          "gap": -0.9,
+          "relative_pct": 91.0,
+          "weighted_contribution": 9.1
+        }
+      ],
+      "risks": [
+        "Mock risk: verify claims with the supplier."
+      ],
+      "overall_summary": "Offline mock evaluation based on keyword evidence.",
+      "warnings": [],
+      "final_rank": 2
+    },
+    {
+      "supplier_name": "Orbit Digital",
+      "submission_date": "2026-09-11",
+      "experience_rating": 4.8,
+      "absolute_score": 49.6,
+      "ppi": 50.6879,
+      "criteria_results": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 2 of 10 indicators (integration, erp).",
+          "evidence": "connect to the ERP; integration details will be finalised during discovery.",
+          "status": "ok",
+          "score": 2.8,
+          "weight": 30.0,
+          "benchmark": 10.0,
+          "gap": -7.2,
+          "relative_pct": 28.0,
+          "weighted_contribution": 8.4
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 5 of 10 indicators (milestone, phase, week, risk register, go-live).",
+          "evidence": "Timeline, Team Structure and Milestones",
+          "status": "ok",
+          "score": 5.5,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -4.5,
+          "relative_pct": 55.0,
+          "weighted_contribution": 11.0
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 5 of 10 indicators (usd, total cost, fixed price, assumption, licen).",
+          "evidence": "Price Table and Assumptions",
+          "status": "ok",
+          "score": 5.5,
+          "weight": 20.0,
+          "benchmark": 9.1,
+          "gap": -3.6,
+          "relative_pct": 60.44,
+          "weighted_contribution": 11.0
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 4 of 10 indicators (soc 2, encrypt, audit, gdpr).",
+          "evidence": "Orbit Digital holds SOC 2 Type II certification.",
+          "status": "ok",
+          "score": 4.6,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -5.4,
+          "relative_pct": 46.0,
+          "weighted_contribution": 9.2
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 10 of 10 indicators (24x7, sla, reference, similar, clients).",
+          "evidence": "Fifteen years of procurement transformation | Fictional document for classroom use",
+          "status": "ok",
+          "score": 10.0,
+          "weight": 10.0,
+          "benchmark": 10.0,
+          "gap": 0.0,
+          "relative_pct": 100.0,
+          "weighted_contribution": 10.0
+        }
+      ],
+      "risks": [
+        "Mock risk: verify claims with the supplier."
+      ],
+      "overall_summary": "Offline mock evaluation based on keyword evidence.",
+      "warnings": [],
+      "final_rank": 3
+    },
+    {
+      "supplier_name": "BrightPath Tech",
+      "submission_date": "2026-09-12",
+      "experience_rating": 3.0,
+      "absolute_score": 39.7,
+      "ppi": 40.9659,
+      "criteria_results": [
+        {
+          "criterion_id": 1,
+          "name": "Technical Capability",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 3 of 10 indicators (api, integration, erp).",
+          "evidence": "Solution: Our multi-tenant SaaS product provides a standard API and a supplier portal.",
+          "status": "ok",
+          "score": 3.7,
+          "weight": 30.0,
+          "benchmark": 10.0,
+          "gap": -6.3,
+          "relative_pct": 37.0,
+          "weighted_contribution": 11.1
+        },
+        {
+          "criterion_id": 2,
+          "name": "Implementation Plan",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 4 of 10 indicators (milestone, phase, week, go-live).",
+          "evidence": "Timeline, Team Structure and Milestones",
+          "status": "ok",
+          "score": 4.6,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -5.4,
+          "relative_pct": 46.0,
+          "weighted_contribution": 9.2
+        },
+        {
+          "criterion_id": 3,
+          "name": "Commercial Value",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 6 of 10 indicators (usd, total cost, fixed price, assumption, licen).",
+          "evidence": "Price Table and Assumptions",
+          "status": "ok",
+          "score": 6.4,
+          "weight": 20.0,
+          "benchmark": 9.1,
+          "gap": -2.7,
+          "relative_pct": 70.33,
+          "weighted_contribution": 12.8
+        },
+        {
+          "criterion_id": 4,
+          "name": "Security & Compliance",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 1 of 10 indicators (encrypt).",
+          "evidence": "BrightPath follows industry-standard security practices and encrypts customer data.",
+          "status": "ok",
+          "score": 1.9,
+          "weight": 20.0,
+          "benchmark": 10.0,
+          "gap": -8.1,
+          "relative_pct": 19.0,
+          "weighted_contribution": 3.8
+        },
+        {
+          "criterion_id": 5,
+          "name": "Support & Experience",
+          "max_score": 10.0,
+          "justification": "Mock scorer matched 2 of 10 indicators (reference, similar).",
+          "evidence": "Support Model, Experience and References",
+          "status": "ok",
+          "score": 2.8,
+          "weight": 10.0,
+          "benchmark": 10.0,
+          "gap": -7.2,
+          "relative_pct": 28.0,
+          "weighted_contribution": 2.8
+        }
+      ],
+      "risks": [
+        "Mock risk: verify claims with the supplier."
+      ],
+      "overall_summary": "Offline mock evaluation based on keyword evidence.",
+      "warnings": [],
+      "final_rank": 4
+    }
+  ],
+  "tie_break_explanation": [
+    "#1 Apex Systems vs #2 NexaWorks: decided by PPI (84.1659 > 82.9000).",
+    "#2 NexaWorks vs #3 Orbit Digital: decided by PPI (82.9000 > 50.6879).",
+    "#3 Orbit Digital vs #4 BrightPath Tech: decided by PPI (50.6879 > 40.9659)."
+  ],
+  "warnings": [],
+  "trace": [
+    {
+      "step": "Batch",
+      "detail": "Created RFP-20261010-100908-72B0 with 4 supplier(s); 5 active criteria loaded."
+    },
+    {
+      "step": "Extract",
+      "detail": "Apex Systems: 2 page(s), 3091 characters."
+    },
+    {
+      "step": "Validate",
+      "detail": "Apex Systems: 0 validation warning(s)."
+    },
+    {
+      "step": "Extract",
+      "detail": "BrightPath Tech: 2 page(s), 1804 characters."
+    },
+    {
+      "step": "Validate",
+      "detail": "BrightPath Tech: 0 validation warning(s)."
+    },
+    {
+      "step": "Extract",
+      "detail": "NexaWorks: 2 page(s), 2767 characters."
+    },
+    {
+      "step": "Validate",
+      "detail": "NexaWorks: 0 validation warning(s)."
+    },
+    {
+      "step": "Extract",
+      "detail": "Orbit Digital: 2 page(s), 1878 characters."
+    },
+    {
+      "step": "Validate",
+      "detail": "Orbit Digital: 0 validation warning(s)."
+    },
+    {
+      "step": "Score",
+      "detail": "Absolute weighted scores calculated for all suppliers."
+    },
+    {
+      "step": "Benchmark",
+      "detail": "Best score per criterion found; gaps, relative % and PPI calculated."
+    },
+    {
+      "step": "Rank",
+      "detail": "Tie-break order applied: PPI -> earlier date -> higher experience -> name A-Z."
+    },
+    {
+      "step": "Persist",
+      "detail": "Results saved to SQLite under RFP-20261010-100908-72B0."
+    }
+  ]
+}
