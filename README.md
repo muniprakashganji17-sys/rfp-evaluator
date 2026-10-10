@@ -9,29 +9,31 @@ does **all arithmetic, benchmarking, tie-breaks and ranking**.
 ```bash
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python scripts/seed_db.py                  # optional - the app also auto-creates/seeds the DB
-python scripts/generate_sample_rfps.py     # optional - 4 sample PDFs already in sample_rfps/
-cp .streamlit/secrets.toml.example .streamlit/secrets.toml   # add your API key
+python seed_db.py                  # optional - the app also auto-creates/seeds the DB
+python generate_sample_rfps.py     # optional - 4 sample PDFs already in sample_rfps/
+mkdir -p .streamlit && cp secrets.toml.example .streamlit/secrets.toml   # add your API key
 streamlit run app.py
 pytest -q                                  # unit tests for validation + ranking
 ```
 No API key? Choose provider **mock** in the sidebar (offline keyword scorer) and tick
 "Use the 4 bundled synthetic RFPs".
 
-## Folder structure
+## Folder structure (flat layout)
 ```
-app.py                     Streamlit UI (5 tabs)
-src/orchestrator.py        Orchestrator Agent - runs the 10-step workflow in order
-src/evaluator.py           Evaluation Agent - prompt builder + LLM call + one retry
-src/llm_client.py          Anthropic / OpenAI-compatible / mock provider
-src/tools/document_tool.py PDF -> clean text (pypdf)
-src/tools/validation_tool.py  JSON parsing, schema checks, clipping, warnings
-src/tools/ranking_tool.py  Scores, benchmarks, gaps, relative %, PPI, tie-breaks, ranks
-src/database.py            SQLite schema, seed, persistence
-scripts/                   seed_db.py, generate_sample_rfps.py
-sample_rfps/               4 fictional supplier PDFs
-sample_output/sample_run.json   exported result of one completed run
-tests/test_tools.py        edge-case tests
+app.py                 Streamlit UI (5 tabs)
+orchestrator.py        Orchestrator Agent - runs the workflow in order
+evaluator.py           Evaluation Agent - prompt + LLM call + retry
+llm_client.py          Anthropic / OpenAI-compatible / mock provider
+document_tool.py       Document Tool: PDF -> text (pypdf)
+validation_tool.py     Validation Tool: JSON parsing, clipping, warnings
+ranking_tool.py        Ranking Tool: formulas, PPI, tie-breaks, ranks
+database.py            SQLite schema, seed, persistence
+seed_db.py             Create + seed the database
+generate_sample_rfps.py  Build the 4 fictional supplier PDFs
+*_RFP_Response.pdf     4 synthetic supplier proposals
+sample_run.json        Exported result of one completed run
+test_tools.py          Edge-case unit tests (pytest)
+secrets.toml.example   Template for API keys
 ```
 
 ## Architecture / data flow
@@ -70,7 +72,7 @@ with surrounding prose is recovered; unparseable output triggers one retry, then
 ## Deploying to Streamlit Community Cloud
 1. Push this folder to a public GitHub repo.
 2. share.streamlit.io -> New app -> select repo, branch, `app.py`.
-3. Settings -> Secrets: paste the contents of `.streamlit/secrets.toml.example` with your real key.
+3. Settings -> Secrets: paste the contents of `secrets.toml.example` with your real key.
 4. Copy the public URL into this README and your submission.
 
 ## Screenshots

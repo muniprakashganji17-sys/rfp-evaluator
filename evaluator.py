@@ -1,8 +1,8 @@
 """Evaluation Agent: builds a criteria-driven prompt and asks the LLM to score ONE supplier."""
 import json
 
-from src.llm_client import LLMError
-from src.tools.validation_tool import extract_json
+from llm_client import LLMError
+from validation_tool import extract_json
 
 SYSTEM_PROMPT = """You are a procurement evaluation analyst scoring ONE supplier's RFP response.
 Rules:

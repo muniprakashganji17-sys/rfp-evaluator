@@ -7,14 +7,14 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from src import database
-from src.llm_client import DEFAULT_MODELS, LLMClient, LLMConfig
-from src.orchestrator import run_evaluation
+import database
+from llm_client import DEFAULT_MODELS, LLMClient, LLMConfig
+from orchestrator import run_evaluation
 
 st.set_page_config(page_title="Agentic RFP Evaluation", page_icon="📑", layout="wide")
 database.init_db()  # creates tables + seeds criteria on first start (works on Streamlit Cloud)
 
-SAMPLE_DIR = Path(__file__).parent / "sample_rfps"
+SAMPLE_DIR = Path(__file__).parent
 SAMPLE_META = {  # default metadata for the bundled synthetic RFPs
     "Apex_Systems": ("Apex Systems", date(2026, 9, 10), 4.2),
     "BrightPath_Tech": ("BrightPath Tech", date(2026, 9, 12), 3.0),
@@ -94,7 +94,7 @@ with tab_in:
     use_samples = st.checkbox("Use the 4 bundled synthetic RFPs", value=False)
     files = []
     if use_samples:
-        for f in sorted(SAMPLE_DIR.glob("*.pdf")):
+        for f in sorted(SAMPLE_DIR.glob("*_RFP_Response.pdf")):
             files.append((f.name, f.read_bytes()))
     else:
         for up in st.file_uploader("PDF files", type=["pdf"], accept_multiple_files=True) or []:

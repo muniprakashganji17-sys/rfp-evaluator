@@ -5,7 +5,7 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-DB_PATH = Path(__file__).resolve().parent.parent / "data" / "rfp.db"
+DB_PATH = Path(__file__).resolve().parent / "data" / "rfp.db"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS evaluation_criteria (

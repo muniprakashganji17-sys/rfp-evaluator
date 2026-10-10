@@ -1,9 +1,11 @@
 """Orchestrator Agent: runs the workflow in the required order and calls each tool/agent."""
 from datetime import datetime, timezone
 
-from src import database
-from src.evaluator import evaluate_supplier
-from src.tools import document_tool, ranking_tool, validation_tool
+import database
+from evaluator import evaluate_supplier
+import document_tool
+import ranking_tool
+import validation_tool
 
 
 def run_evaluation(suppliers, llm, db_path=None, progress=None):

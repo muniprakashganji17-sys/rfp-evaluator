@@ -2,9 +2,9 @@ import sys
 from datetime import date
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from src.tools.ranking_tool import compute_and_rank, relative_pct  # noqa: E402
-from src.tools.validation_tool import extract_json, validate_evaluation  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ranking_tool import compute_and_rank, relative_pct  # noqa: E402
+from validation_tool import extract_json, validate_evaluation  # noqa: E402
 
 CRITERIA = [
     {"criterion_id": 1, "name": "Tech", "description": "", "weight": 60, "max_score": 10},

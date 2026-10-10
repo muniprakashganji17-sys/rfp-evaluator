@@ -9,7 +9,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
-OUT = Path(__file__).resolve().parent.parent / "sample_rfps"
+OUT = Path(__file__).resolve().parent
 OUT.mkdir(exist_ok=True)
 ss = getSampleStyleSheet()
 H1 = ParagraphStyle("H1", parent=ss["Heading1"], fontSize=15, spaceAfter=6)
